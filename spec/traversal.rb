@@ -3,6 +3,7 @@ require "./lib/traversal"
 RSpec.describe Traversal do
   before(:all) do
     @traversal = Traversal.new
+    @traversal.traverse
   end
 
   it "finds all the .htm files" do
