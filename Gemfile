@@ -7,4 +7,3 @@ end
 
 gem 'minitest-reporters',       '1.1.9'
 gem 'rspec'
-gem 'nokogiri'
