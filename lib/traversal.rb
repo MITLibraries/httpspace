@@ -2,9 +2,10 @@ require 'helpers'
 class Traversal
 
   def initialize
-    @counts = Hash[FILETYPES.map {|filetype| [filetype, 0]}]
+    @counts = Hash[FILETYPES.map {|filetype| [filetype, []]}]
   end
 
+  # Find all the files of types that we care about.
   def traverse(path='./files')
     Dir.foreach(path) do |file|
       if file == '.' or file == '..'
@@ -14,7 +15,7 @@ class Traversal
       else
         filetype = File.extname(file).downcase.tr('.', '')
         if FILETYPES.include?(filetype)
-          @counts[filetype] += 1
+          @counts[filetype] << File.join(path, file)
         end
       end
     end
@@ -24,7 +25,7 @@ class Traversal
     if !FILETYPES.include?(filetype)
       raise 'Invalid file type'
     end
-    @counts[filetype]
+    @counts[filetype].length
   end
 
 end
