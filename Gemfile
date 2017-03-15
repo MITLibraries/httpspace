@@ -6,5 +6,5 @@ git_source(:github) do |repo_name|
 end
 
 gem 'minitest-reporters',       '1.1.9'
-gem 'sqlite3'
 gem 'rspec'
+gem 'nokogiri'
