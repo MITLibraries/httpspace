@@ -46,4 +46,18 @@ class Replacer
     end
   end
 
+  def notify
+    puts "#@links_processed total links processed"
+
+    bad_files = @files_processed.select { |k,v| !v }.keys
+    if bad_files.length > 1
+      puts "The following files could not be processed: "
+      puts bad_files
+    elsif bad_files.length == 1
+      puts "The following file could not be processed:"
+      puts bad_files
+    else
+      puts "All files processed; hooray!"
+    end
+  end
 end

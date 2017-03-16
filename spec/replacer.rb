@@ -5,13 +5,12 @@ require "./lib/helpers"
 
 RSpec.describe Replacer do
   before(:all) do
-    @source = File.join(File.dirname(__FILE__), 'testfiles', '75804')
-    @destination = File.join(File.dirname(__FILE__), 'testfiles', 'tmp')
-    FileUtils.copy_entry @source, @destination
+    setup_files
+    @destination = destination
   end
 
   after(:all) do
-    FileUtils.rm_r @destination
+    teardown_files
   end
 
   before(:each) do

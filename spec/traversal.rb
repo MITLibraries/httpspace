@@ -3,8 +3,13 @@ require "./lib/helpers"
 
 RSpec.describe Traversal do
   before(:all) do
+    setup_files
     @traversal = Traversal.new
-    @traversal.traverse
+    @traversal.traverse(destination)
+  end
+
+  after(:all) do
+    teardown_files
   end
 
   it "tests the filetypes we require" do
