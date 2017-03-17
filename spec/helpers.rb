@@ -1,3 +1,5 @@
+require './lib/helpers'
+
 # Anything you define in Helpers will be automatically available to all tests
 # via spec_helper.
 
@@ -16,4 +18,5 @@ module Helpers
   def destination
     @@destination
   end
+
 end

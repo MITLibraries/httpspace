@@ -50,8 +50,9 @@ RSpec.describe Traversal do
   it "records the files" do
     expect(@traversal.candidates.length).to eq(88)
     # Check: all elements are distinct. If they're all different and we have
-    # the number we expected, then by the pigeonhole principle we must have
-    # found everything we expected. BOOM, using that math degree.
+    # the number we expected, then we've just constucted a one-to-one and onto
+    # mapping so we must have all the elements we expected. BOOM, using that
+    # math degree.
     expect(@traversal.candidates.uniq).to eq(@traversal.candidates)
   end
 
