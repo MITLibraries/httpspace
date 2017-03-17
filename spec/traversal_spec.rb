@@ -47,4 +47,12 @@ RSpec.describe Traversal do
     expect(@traversal.count('xml')).to eq(32)
   end
 
+  it "records the files" do
+    expect(@traversal.candidates.length).to eq(88)
+    # Check: all elements are distinct. If they're all different and we have
+    # the number we expected, then by the pigeonhole principle we must have
+    # found everything we expected. BOOM, using that math degree.
+    expect(@traversal.candidates.uniq).to eq(@traversal.candidates)
+  end
+
 end
