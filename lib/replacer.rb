@@ -1,6 +1,6 @@
 require 'tempfile'
 require 'fileutils'
-require 'helpers'
+require_relative 'helpers'
 
 class Replacer
   attr_reader :links_processed
