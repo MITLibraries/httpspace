@@ -1,6 +1,7 @@
 personal/
 .zip
 index_file_record.txt
+files/
 
 # Created by https://www.gitignore.io/api/osx,ruby
 
