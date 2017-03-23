@@ -1,36 +1,49 @@
-require_relative "traversal"
+#!/usr/bin/ruby
+require "CSV"
+require "fileutils"
+require_relative "mets"
 require_relative "replacer"
+require_relative "traversal"
 
-#traversal = Traversal.new
-#traversal.traverse
+class HttpSpace
+  def get_handles(csvfile)
+    mycsv = CSV.read(csvfile, :headers=>true)
+    handle_uris = mycsv['dc.identifier.uri']
+    handles = handle_uris.reject { |x| x.nil? }.map { |x| x.sub('http://hdl.handle.net/', '') }
+    File.open("item_handles.txt", "w") { |f|
+      handles.each { |handle| f.puts(handle) }
+    }
+  end
 
-#replacer = Replacer.new
-#replacer.update(traversal.candidates)
+  def process_items(dirname)
+    tempdir = File.join(dirname, 'temp')
+    FileUtils.mkdir_p tempdir
+    system("rm #{tempdir}/*")
 
-# Given a community handle....
-# => Get the community
-# => Unzip it
-# =>  Parse its mets.xml to find its collection handles
-# =>  For each collection handle...
-#     => Get the collection
-#     => Unzip it
-#     => Parse its mets.xml to find its constituent item handles
-#     => For each item handle...
-#        => Get the item
-#        => Unzip it
-#        => Traverse it to find relevant files
-#        => Replace their contents as needed
-#        => Parse its mets.xml to find bitstreams with changed checksums
-#        => Update the checksums
-#        => Rezip it
-#        => Restore/replace the item
-#        => Delete now unneeded item directory and zip file
-#     => Delete now unneeded collection directory and zip file
-# => Delete now unneeded community directory and zip file
+    @traversal = Traversal.new
+    @replacer = Replacer.new
+    @mets = METS.new
+
+    Dir.glob("#{dirname}/*.zip") do |zipfile|
+      system("unzip #{zipfile} -d #{tempdir}")
+      @traversal.traverse(tempdir)
+      @replacer.update(@traversal.candidates)
+      metsfile = File.join(tempdir, 'mets.xml')
+      if !File.exist?(metsfile)
+        raise "No mets.xml in #{tempdir}"
+      end
+      @mets.update_metadata(metsfile)
+      thedir, thefile = File.split(zipfile)
+
+      # Note that the file extension .zip is already included in thefile.
+      system("zip -j #{thedir}/new_#{thefile} #{tempdir}/*")
+      system("rm #{tempdir}/*")
+    end
+  end
+end
 
 # Responsibilities of lib/*.rb files:
 #   * traversal: find files which are candidates for being updated
 #   * replacer: replace their http://ocw.mit.edu URLs with https URLs
 #   * mets: parse and update mets files
-#   * packager: interact with the DSpace packager command
 #   * httpspace (this file): run the whole process

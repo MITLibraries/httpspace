@@ -28,15 +28,16 @@ class METS
     child_ids
   end
 
-  def update_checksums(metsfile)
-    # Given a METS file for an item, see if the checksums are correct, and fix
-    # them if not. (Assumes that the referenced bitstreams are in the same
-    # directory.)
+  def update_metadata(metsfile)
+    # Given a METS file for an item, see if the files have changed; if so, fix
+    # the size and checksum metadata. (Assumes that the referenced bitstreams
+    # are in the same directory.)
 
     @doc = Nokogiri::XML(File.read(metsfile))
     bitstreams = @doc.css('file')
 
     bitstreams.each do |bitstream|
+      # Find MODS record for bitstream item
       checksum = bitstream.attribute('CHECKSUM')
       bitfile = bitstream.css('FLocat')[0]['xlink:href']
       bitfilepath = File.join(File.split(metsfile)[0], bitfile)
@@ -46,12 +47,24 @@ class METS
       # will fail due to their different object types, even though the
       # representations look the same.
       if checksum.to_s != new_checksum.to_s
-        puts bitfilepath
-        bitstream['CHECKSUM'] = new_checksum.to_s
+
+        # Get PREMIS components. It's easy to find the one with the MD5 hash
+        # as we are blithely assuming no collisions. Finding the size node in
+        # the same record...ugh, xpath.
+        digest_node = @doc.xpath("//*[contains(text(), '#{checksum.to_s}')]")[0]
+        size_node = digest_node.xpath(
+            './ancestor::premis:objectCharacteristics',
+            'premis' => 'http://www.loc.gov/standards/premis'
+          ).xpath(
+            './descendant::premis:size',
+            'premis' => 'http://www.loc.gov/standards/premis')[0]
+
+        # Update MODS and PREMIS records
+        bitstream['CHECKSUM'] = digest_node.content = new_checksum.to_s
+        bitstream['SIZE'] = size_node.content = File.size(bitfilepath)
       end
     end
 
     File.write(metsfile, @doc.to_xml)
   end
-
 end

@@ -1,7 +1,12 @@
 #!/bin/bash
 
-# After you have generated a packager dump of the collection and scped it into
-# spec/testfiles/dspace-test ...
+# This will want to:
+# get a community via packager and feed it to ruby
+# get collections via that output
+# get items via that output
+# zip and restore/replace the items
+# Actually I probably want to do this all in ruby: http://stackoverflow.com/questions/2232/calling-shell-commands-from-ruby
+# Yes in fact: system calls are super easy - https://gist.github.com/JosephPecoraro/4069
 
 cd files
 
