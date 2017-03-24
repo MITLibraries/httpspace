@@ -28,31 +28,48 @@ module HttpSpace
     # Given a directory containing zipped OCW item files:
     # * unzips each file
     # * finds and replaces http://ocw.mit.edu links with https
-    # * rezips the file
+    # * rezips the file, if there were any changes
     # * deletes the temporary unzipped files
     def process_items(dirname)
-      tempdir = File.join(dirname, 'temp')
-      FileUtils.mkdir_p tempdir
-      system("rm #{tempdir}/*")
-
-      @replacer = Replacer.new
+      initialize_tempdir(dirname)
 
       Dir.glob("#{dirname}/*.zip") do |zipfile|
-        system("unzip #{zipfile} -d #{tempdir}")
-        Traversal.traverse(tempdir)
-        @replacer.update(Traversal.candidates)
-        metsfile = File.join(tempdir, 'mets.xml')
-        if !File.exist?(metsfile)
-          raise "No mets.xml in #{tempdir}"
-        end
-        METS.update_metadata(metsfile)
-        thedir, thefile = File.split(zipfile)
+        initialize_tempdir
 
-        # Note that the file extension .zip is already included in thefile.
-        system("zip -j #{thedir}/new_#{thefile} #{tempdir}/*")
-        system("rm #{tempdir}/*")
+        system("unzip #{zipfile} -d #{@tempdir}")
+        Traversal.traverse(@tempdir)
+        Replacer.update(Traversal.candidates)
+
+        handle_metsfile
+        clean_up
       end
     end
+
+    private
+      def initialize_tempdir(basedir)
+        @tempdir = File.join(basedir, 'temp')
+        FileUtils.mkdir_p @tempdir
+        system("rm #{@tempdir}/*")
+      end
+
+      def clean_up
+        if Replacer.links_processed
+          thedir, thefile = File.split(zipfile)
+
+          # Note that the file extension .zip is already included in thefile.
+          system("zip -j #{thedir}/new_#{thefile} #{@tempdir}/*")
+        end
+        system("rm #{@tempdir}/*")
+      end
+
+      def handle_metsfile
+        metsfile = File.join(@tempdir, 'mets.xml')
+        if !File.exist?(metsfile)
+          raise "No mets.xml in #{@tempdir}"
+        end
+
+        METS.update_metadata(metsfile)
+      end
   end
 
 end
