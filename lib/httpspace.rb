@@ -31,8 +31,13 @@ module HttpSpace
     # * rezips the file, if there were any changes
     # * deletes the temporary unzipped files
     def process_items(dirname)
+      @tempdir = File.join(dirname, 'temp')
+      FileUtils.mkdir_p @tempdir
+
+      @csv_index = -1
+
       Dir.glob("#{dirname}/*.zip") do |zipfile|
-        initialize_tempdir(dirname)
+        system("rm #{@tempdir}/*")
 
         system("unzip #{zipfile} -d #{@tempdir}")
         Traversal.traverse(@tempdir)
@@ -40,16 +45,32 @@ module HttpSpace
 
         handle_metsfile
         clean_up(zipfile)
+
+        @csv_index += 1
+        if @csv_index % 100 == 0
+          start_csv
+        end
+        write_csv(METS.item_id, METS.provenance)
       end
     end
 
     private
+
       ##
-      # Makes the temporary working directory if needed, and empties it.
-      def initialize_tempdir(basedir)
-        @tempdir = File.join(basedir, 'temp')
-        FileUtils.mkdir_p @tempdir
-        system("rm #{@tempdir}/*")
+      # Starts a CSV file to record new provenance metadata.
+      def start_csv
+        project_dir = File.dirname(File.dirname(__FILE__))
+        @current_csv = File.join(project_dir, "provenance_#{@csv_index}.csv")
+        system("touch #{@current_csv}")
+        CSV.open(@current_csv, "wb") do |csv|
+          csv << ["id", "dc.description.provenance[en]"]
+        end
+      end
+
+      def write_csv(id, provenance)
+        CSV.open(@current_csv, "a") do |csv|
+          csv << ["#{id}", "#{provenance}"]
+        end
       end
 
       ##

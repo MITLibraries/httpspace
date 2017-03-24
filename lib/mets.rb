@@ -1,3 +1,4 @@
+require "date"
 require "digest"
 require "nokogiri"
 
@@ -6,6 +7,8 @@ require "nokogiri"
 module METS
 
   class << self
+    attr_reader :provenance, :item_id
+
     ##
     # Given a filename for an item mets.xml, see if the files have changed; if so,
     # fix the size and checksum metadata. (Assumes that the referenced bitstreams
@@ -15,6 +18,12 @@ module METS
       @doc = Nokogiri::XML(File.read(metsfile))
       bitstreams = @doc.css('file')
 
+      @provenance = <<-EOF.gsub(/^\s+/, '')
+        OCW links updated to https by m31@mit.edu on %{date}
+        No. of bitstreams updated: %{count}
+      EOF
+
+      @count = 0
       bitstreams.each do |bitstream|
         checksum = bitstream.attribute('CHECKSUM')
         bitstreampath = File.split(metsfile)[0]
@@ -25,20 +34,29 @@ module METS
         # representations look the same. If they differ, update the MODS and
         # PREMIS records.
         if checksum.to_s != new_checksum.to_s
-          digest_node, size_node = get_premis_components(checksum)
+          digest_node, size_node, original_name = get_premis_components(checksum)
           bitstream['CHECKSUM'] = digest_node.content = new_checksum.to_s
           bitstream['SIZE'] = size_node.content = file_size
+          append_provenance(original_name, new_checksum, file_size)
+          @count += 1
         end
       end
 
+      date = Time.now.utc.strftime('%Y-%m-%dT%H:%M:%SZ')
+      @provenance = @provenance % {:date => date, :count => @count}
+      set_item_id(metsfile)
       File.write(metsfile, @doc.to_xml)
     end
 
     private
 
+      def append_provenance(original_name, new_checksum, file_size)
+        @provenance << "#{original_name}: #{file_size} bytes, checksum: #{new_checksum} (MD5)"
+      end
+
       ##
-      # Given a checksum, returns the size and checksum components of the PREMIS
-      # record associated with that checksum.
+      # Given a checksum, returns the size, checksum, and file name components
+      # of the PREMIS record associated with that checksum.
       def get_premis_components(checksum)
         # Get PREMIS components. It's easy to find the one with the MD5 hash
         # as we are blithely assuming no collisions. Finding the size node in
@@ -50,8 +68,14 @@ module METS
           ).xpath(
             './descendant::premis:size',
             'premis' => 'http://www.loc.gov/standards/premis')[0]
+        original_name = digest_node.xpath(
+            './ancestor::premis:object',
+            'premis' => 'http://www.loc.gov/standards/premis'
+          ).xpath(
+            './descendant::premis:originalName',
+            'premis' => 'http://www.loc.gov/standards/premis')[0].content
 
-        [digest_node, size_node]
+        [digest_node, size_node, original_name]
       end
 
       ##
@@ -62,6 +86,10 @@ module METS
         bitfilepath = File.join(bitstreampath, bitfile)
 
         [Digest::MD5.file(bitfilepath), File.size(bitfilepath)]
+      end
+
+      def set_item_id(metsfile)
+        @item_id = @doc.css('mets')[0]['OBJID'].sub('hdl:', '')
       end
   end
 
