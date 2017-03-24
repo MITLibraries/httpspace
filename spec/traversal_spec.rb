@@ -4,8 +4,7 @@ require "./lib/helpers"
 RSpec.describe Traversal do
   before(:all) do
     setup_files
-    @traversal = Traversal.new
-    @traversal.traverse(destination)
+    Traversal.traverse(destination)
   end
 
   after(:all) do
@@ -23,37 +22,37 @@ RSpec.describe Traversal do
   end
 
   it "finds all the .htm files" do
-    expect(@traversal.count('htm')).to eq(10)
+    expect(Traversal.count('htm')).to eq(10)
   end
 
   it "finds all the .html files" do
     # (there aren't actually any)
-    expect(@traversal.count('html')).to eq(0)
+    expect(Traversal.count('html')).to eq(0)
   end
 
   it "finds all the .css files" do
-    expect(@traversal.count('css')).to eq(13)
+    expect(Traversal.count('css')).to eq(13)
   end
 
   it "finds all the .js files" do
-    expect(@traversal.count('js')).to eq(9)
+    expect(Traversal.count('js')).to eq(9)
   end
 
   it "finds all the .pdf files" do
-    expect(@traversal.count('pdf')).to eq(24)
+    expect(Traversal.count('pdf')).to eq(24)
   end
 
   it "finds all the .xml files" do
-    expect(@traversal.count('xml')).to eq(32)
+    expect(Traversal.count('xml')).to eq(32)
   end
 
   it "records the files" do
-    expect(@traversal.candidates.length).to eq(88)
+    expect(Traversal.candidates.length).to eq(88)
     # Check: all elements are distinct. If they're all different and we have
     # the number we expected, then we've just constucted a one-to-one and onto
     # mapping so we must have all the elements we expected. BOOM, using that
     # math degree.
-    expect(@traversal.candidates.uniq).to eq(@traversal.candidates)
+    expect(Traversal.candidates.uniq).to eq(Traversal.candidates)
   end
 
 end

@@ -8,3 +8,4 @@ end
 gem 'minitest-reporters',       '1.1.9'
 gem 'rspec'
 gem 'nokogiri',                 '1.7.1'
+gem 'rdoc'

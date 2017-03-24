@@ -21,6 +21,7 @@ steps:
   - [dspace]/bin/dspace packager -r -f -t AIP -e <eperson> <AIP-file-path>
   - see if you can run it in noninteractive mode, or else autosupply the y<enter> when it prompts
   - provenance does not write automatically; you need to
+  - track which ones you actually change and only update those
 
 ## Troubleshooting
 

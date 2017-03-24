@@ -10,5 +10,3 @@ DSPACE_BIN_DIR = '/home/dspace/dspace.mit.edu/bin/dspace'
 
 # The user who is running this process (may appear in dspace provenance records).
 RESPONSIBLE_USER = 'm31@mit.edu'
-
-WORKING_DIR = '/home/dspace/dspace.mit.edu/httpspace'
