@@ -27,4 +27,3 @@ Make sure permissions are set right on the server. (In particular, you're scping
 
 ## to do
 - provenance does not write automatically; you need to
-- track which ones you actually change and only update those

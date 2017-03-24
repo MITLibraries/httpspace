@@ -31,29 +31,35 @@ module HttpSpace
     # * rezips the file, if there were any changes
     # * deletes the temporary unzipped files
     def process_items(dirname)
-      initialize_tempdir(dirname)
-
       Dir.glob("#{dirname}/*.zip") do |zipfile|
-        initialize_tempdir
+        initialize_tempdir(dirname)
 
         system("unzip #{zipfile} -d #{@tempdir}")
         Traversal.traverse(@tempdir)
         Replacer.update(Traversal.candidates)
 
         handle_metsfile
-        clean_up
+        clean_up(zipfile)
       end
     end
 
     private
+      ##
+      # Makes the temporary working directory if needed, and empties it.
       def initialize_tempdir(basedir)
         @tempdir = File.join(basedir, 'temp')
         FileUtils.mkdir_p @tempdir
         system("rm #{@tempdir}/*")
       end
 
-      def clean_up
-        if Replacer.links_processed
+      ##
+      # Zips the working files into a new archive if there were any changes and
+      # then deletes the working files.
+      def clean_up(zipfile)
+        # We're only going to rezip the file if we've replaced links. This
+        # will let us import *.zip back into dspace later without any wasted
+        # effort.
+        if Replacer.links_processed > 0
           thedir, thefile = File.split(zipfile)
 
           # Note that the file extension .zip is already included in thefile.
@@ -62,6 +68,8 @@ module HttpSpace
         system("rm #{@tempdir}/*")
       end
 
+      ##
+      # Updates item metadata (or dies if it can't find any).
       def handle_metsfile
         metsfile = File.join(@tempdir, 'mets.xml')
         if !File.exist?(metsfile)
