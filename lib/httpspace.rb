@@ -30,6 +30,7 @@ module HttpSpace
     # * finds and replaces http://ocw.mit.edu links with https
     # * rezips the file, if there were any changes
     # * deletes the temporary unzipped files
+    # * records any files that could not be successfully processed
     def process_items(dirname)
       @tempdir = File.join(dirname, 'temp')
       FileUtils.mkdir_p @tempdir
@@ -37,20 +38,30 @@ module HttpSpace
       @csv_index = -1
 
       Dir.glob("#{dirname}/*.zip") do |zipfile|
-        system("rm #{@tempdir}/*")
+        @zipfile = zipfile
+        system("rm -f #{@tempdir}/*")
 
-        system("unzip #{zipfile} -d #{@tempdir}")
-        Traversal.traverse(@tempdir)
-        Replacer.update(Traversal.candidates)
+        begin
+          system("unzip #{@zipfile} -d #{@tempdir}")
 
-        handle_metsfile
-        clean_up(zipfile)
+          Traversal.traverse(@tempdir)
+          Replacer.update(Traversal.candidates)
 
-        @csv_index += 1
-        if @csv_index % 100 == 0
-          start_csv
+          handle_metsfile
+
+          clean_up
+
+          @csv_index += 1
+          if @csv_index % 100 == 0
+            start_csv
+          end
+          write_csv(METS.item_id, METS.provenance)
+        rescue
+          File.open("bad_zipfiles.txt", "a") { |f|
+            f.write(@zipfile)
+          }
+          next
         end
-        write_csv(METS.item_id, METS.provenance)
       end
     end
 
@@ -69,24 +80,24 @@ module HttpSpace
 
       def write_csv(id, provenance)
         CSV.open(@current_csv, "a") do |csv|
-          csv << ["#{id}", "#{provenance}"]
+          csv << ["\"#{id}\"", "#{provenance}"]
         end
       end
 
       ##
       # Zips the working files into a new archive if there were any changes and
       # then deletes the working files.
-      def clean_up(zipfile)
+      def clean_up
         # We're only going to rezip the file if we've replaced links. This
         # will let us import *.zip back into dspace later without any wasted
         # effort.
         if Replacer.links_processed > 0
-          thedir, thefile = File.split(zipfile)
+          thedir, thefile = File.split(@zipfile)
 
           # Note that the file extension .zip is already included in thefile.
           system("zip -j #{thedir}/new_#{thefile} #{@tempdir}/*")
         end
-        system("rm #{@tempdir}/*")
+        system("rm -f #{@tempdir}/*")
       end
 
       ##
