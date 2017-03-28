@@ -18,25 +18,12 @@ steps:
   * This will be over a thousand items. Check first to ensure you have enough free disk space on both machines.
 * [on local] scp the item files from server to dev
 * HttpSpace::process_items(directory)
-
-  HEY YOU TEST PROVENANCE BEFORE CONTINUING
-* scp new item files from dev to server
+* scp files/new* and provenance_*.csv from dev to server
 * [on dspace] Import all your new files:
-  * ./import_items /directory/with/your/zip/files/
+  * `./import_items /directory/with/your/zip/files/`
+* Import new metadata:
+  * `./import_metadata /directory/with/your/provenance/files/`
 
 ## Troubleshooting
 
 Make sure permissions are set right on the server. (In particular, you're scping as yourself but operating commands as dspace.)
-
-## to do
-- provenance does not write automatically; you need to
-  - Problems:
-    - The ID is not the handle, nor is it in the file, nor is it the filename
-    - You may have broken one of them with the import
-    - You can import provenance according to the command line, BUT it discards
-      previous provenance records
-  --> Therefore:
-    you need to actually edit an existing provenance.csv file as you go
-    whee
-    you need to export that metadata file WITH PROVENANCE
-- HttpSpace should catch errors in file IO, write them, and continue
