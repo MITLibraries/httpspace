@@ -25,6 +25,19 @@ module HttpSpace
     end
 
     ##
+    # Given that same file, create a stripped-down version with just id,
+    # handle, and provenance. We'll use this to update provenance later.
+    def initialize_provenance(csvfile)
+      mycsv = CSV.read(csvfile, :headers=>true)
+      @provenance_all = []
+      mycsv.each { |row|
+        @provenance_all << {"id": row["id"],
+                           "uri": row["dc.identifier.uri"],
+                           "provenance": row["dc.description.provenance[en]"]}
+      }
+    end
+
+    ##
     # Given a directory containing zipped OCW item files:
     # * unzips each file
     # * finds and replaces http://ocw.mit.edu links with https
@@ -48,17 +61,12 @@ module HttpSpace
           Replacer.update(Traversal.candidates)
 
           handle_metsfile
-
           clean_up
+          update_csv
 
-          @csv_index += 1
-          if @csv_index % 100 == 0
-            start_csv
-          end
-          write_csv(METS.item_id, METS.provenance)
         rescue
           File.open("bad_zipfiles.txt", "a") { |f|
-            f.write(@zipfile)
+            f.puts(File.split(@zipfile)[1])
           }
           next
         end
@@ -78,10 +86,43 @@ module HttpSpace
         end
       end
 
-      def write_csv(id, provenance)
+      ##
+      # Writes the object ID and an updated provenance statement to our current
+      # CSV output file.
+      def write_csv
+        original_info = get_original_info
+        updated_info = [
+          original_info[:id],
+          # Concatenate original and new provenance with dspace special
+          # character.
+          # If we try to import a csv file with just the updated provenance,
+          # it will *overwrite*, not append, so we need to keep the original.
+          original_info[:provenance] + "||" + METS.provenance
+        ]
         CSV.open(@current_csv, "a") do |csv|
-          csv << ["\"#{id}\"", "#{provenance}"]
+          csv << updated_info
         end
+      end
+
+      ##
+      # Governs the start_csv and write_csv processes above..
+      def update_csv
+        # We limit the CSV files to 100 lines because dspace may choke if we
+        # ask it to import too much metadata at a time.
+        @csv_index += 1
+        if @csv_index % 100 == 0
+          start_csv
+        end
+        write_csv
+      end
+
+      ##
+      # Gets the dspace ID and original provenance statement for the current file.
+      def get_original_info
+        file_id = File.basename(@zipfile, '.zip')
+        @provenance_all.find { |obj|
+          obj[:uri] == "http://hdl.handle.net/1721.1/#{file_id}"
+        }
       end
 
       ##

@@ -42,7 +42,7 @@ module METS
         end
       end
 
-      date = Time.now.utc.strftime('%Y-%m-%dT%H:%M:%SZ')
+      date = Time.now.utc.strftime('%Y-%m-%d %H:%M:%S (UTC)')
       @provenance = @provenance % {:date => date, :count => @count}
       set_item_id(metsfile)
       File.write(metsfile, @doc.to_xml)
