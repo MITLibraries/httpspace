@@ -14,7 +14,7 @@ steps:
 * HttpSpace::get_handles(csvfile)
 * HttpSpace::initialize_provenance(csvfile)
 * scp the newly generated file of handles (item_handles.txt) back to the server
-* [on dspace] Fetch all items with those handles: ./bin/fetch_items.sh < item_handles.txt
+* [on dspace] Fetch all items with those handles: `./bin/fetch_items.sh < item_handles.txt`
   * This will be over a thousand items. Check first to ensure you have enough free disk space on both machines.
 * [on local] scp the item files from server to dev
 * HttpSpace::process_items(directory)

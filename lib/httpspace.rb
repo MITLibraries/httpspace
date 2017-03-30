@@ -31,9 +31,9 @@ module HttpSpace
       mycsv = CSV.read(csvfile, :headers=>true)
       @provenance_all = []
       mycsv.each { |row|
-        @provenance_all << {"id": row["id"],
-                           "uri": row["dc.identifier.uri"],
-                           "provenance": row["dc.description.provenance[en]"]}
+        @provenance_all << {"id" => row["id"],
+                           "uri" => row["dc.identifier.uri"],
+                           "provenance" => row["dc.description.provenance"]}
       }
     end
 
