@@ -82,7 +82,7 @@ module HttpSpace
         @current_csv = File.join(project_dir, "provenance_#{@csv_index}.csv")
         system("touch #{@current_csv}")
         CSV.open(@current_csv, "wb") do |csv|
-          csv << ["id", "dc.description.provenance[en]"]
+          csv << ["id", "dc.description.provenance"]
         end
       end
 

@@ -20,10 +20,19 @@ steps:
 * HttpSpace::process_items(directory)
 * scp files/new* and provenance_*.csv from dev to server
 * [on dspace] Import all your new files:
-  * `./import_items /directory/with/your/zip/files/`
+  * `nohup ./import_items /directory/with/your/zip/files/ &`
+  * (nohup prevents the process from dying when your ssh connection goes down, e.g. due to your computer sleeping)
 * Import new metadata:
-  * `./import_metadata /directory/with/your/provenance/files/`
+  * `nohup ./import_metadata /directory/with/your/provenance/files/ &`
 
 ## Troubleshooting
 
 Make sure permissions are set right on the server. (In particular, you're scping as yourself but operating commands as dspace.)
+
+Make sure bin/ files are executable.
+
+## Todo
+The JDOM comment thing that barfs on -- ; how to handle that (it's often enough we want a scripted answer)
+
+The metadata import doesn't seem to add provenance - actually it seems to remove it all. Whuh.
+  it's interactive; do we need to echo y into it or something?
