@@ -24,31 +24,34 @@ module Replacer
 
       files.each do |filename|
         @files_processed[filename] = false
+        @errors = false
         if File.file?(filename)
           begin
             temp_file = Tempfile.new('closed_courseware')
             @@current_filename = filename
+            regex = /http:\/\/(ocw[0-9]*.mit.edu)/
 
             File.open(filename, 'r+') do |file|
               file.each_line do |line|
-                # Execution of the code block will implicitly return the last line,
-                # which is then used as the replacement pattern. The processed
-                # variable must be incremented *first* or it will be returned and
-                # we will change URLs into numbers.
-                subbed_line = line.gsub!('http://ocw.mit.edu') {
-                  @links_processed += 1; 'https://ocw.mit.edu';
-                }
+                begin
+                  @links_processed += line.gsub(regex).count
+                  subbed_line = line.gsub!(regex, 'https://\1')
 
-                # gsub returns nil if it doesn't make any substitutions. In that
-                # case, we want to use the original line.
-                temp_file.puts subbed_line ? subbed_line : line
+                  # gsub returns nil if it doesn't make any substitutions. In that
+                  # case, we want to use the original line.
+                  temp_file.puts subbed_line ? subbed_line : line
+                rescue
+                  @errors = true
+                end
               end
             end
 
             temp_file.close
             FileUtils.mv(temp_file.path, filename)
-            @files_processed[filename] = true
-          ensure
+            if !@errors
+              @files_processed[filename] = true
+            end
+          rescue
             temp_file.close
             temp_file.unlink
           end
