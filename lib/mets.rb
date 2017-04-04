@@ -19,7 +19,7 @@ module METS
       bitstreams = @doc.css('file')
 
       @provenance = <<-EOF.gsub(/^\s+/, '')
-        OCW links updated to https by m31@mit.edu on %{date}
+        OCW and media links updated to https by m31@mit.edu on %{date}
         No. of bitstreams updated: %{count}
       EOF
 
