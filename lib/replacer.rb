@@ -87,8 +87,8 @@ module Replacer
         # in fact calling out to YouTube or Internet Archive. They can be
         # trusted to have https, though, so let's do that.
         regexes = [/http:\/\/(ocw[0-9]*.mit.edu)/,
-                   /http:\/\/([a-zA-Z0-9_]*.archive.org)/,
-                   /http:\/\/([a-zA-Z0-9_]*.youtube.com)/]
+                   /http:\/\/([a-zA-Z0-9_]+.archive.org)/,
+                   /http:\/\/([a-zA-Z0-9_]+.youtube.com)/]
 
         line = line.encode('UTF-8', :invalid => :replace)
         regexes.each do |regex|

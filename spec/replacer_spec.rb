@@ -18,28 +18,28 @@ RSpec.describe Replacer do
   end
 
   it "finds all the http://ocw.mit.edu links in xml" do
-    testfile = File.join(@destination, 'imsmanifest.xml')
-    Replacer.update([testfile])
-    expect(Replacer.links_processed).to eq(6)
-  end
-
-  it "finds all the http://ocw.mit.edu links in html" do
-    testfile = File.join(@destination, '5-301-january-iap-2004/contents/index.htm')
-    Replacer.update([testfile])
-    expect(Replacer.links_processed).to eq(76)
-  end
-
-  it "finds all the http://ocw.mit.edu links in js" do
-    testfile = File.join(@destination, '5-301-january-iap-2004/common/scripts/ocw-offline.js')
+    testfile = File.join(@destination, 'mets.xml')
     Replacer.update([testfile])
     expect(Replacer.links_processed).to eq(1)
   end
 
+  it "finds all the http://ocw.mit.edu links in html" do
+    testfile = File.join(@destination, 'bitstream_1024212.htm')
+    Replacer.update([testfile])
+    expect(Replacer.links_processed).to eq(80)
+  end
+
+  it "finds all the http://ocw.mit.edu links in js" do
+    testfile = File.join(@destination, 'bitstream_1024119')
+    Replacer.update([testfile])
+    expect(Replacer.links_processed).to eq(7)
+  end
+
   it "can take a list of files" do
-    file1 = File.join(@destination, '5-301-january-iap-2004/contents/syllabus/index.htm')
-    file2 = File.join(@destination, '5-301-january-iap-2004/contents/syllabus/index.htm.xml')
+    file1 = File.join(@destination, 'bitstream_1024119')
+    file2 = File.join(@destination, 'bitstream_1024212.htm')
     Replacer.update([file1, file2])
-    expect(Replacer.links_processed).to eq(82)
+    expect(Replacer.links_processed).to eq(87)
   end
 
   it "does not choke on non-files" do
@@ -51,8 +51,8 @@ RSpec.describe Replacer do
   # notified about speed every time we run tests. This will help us decide the
   # correct DSpace import/export strategy.
   it "is not too slow" do
-    testfiles = Dir.entries(File.join(@destination, '5-301-january-iap-2004/contents/labs'))
-    usable_testfiles = testfiles.map { |file| File.join(@destination, '5-301-january-iap-2004/contents/labs', file) }
+    testfiles = Dir.glob(File.join(@destination, '*.*'))
+    usable_testfiles = testfiles.map { |file| file if File.file? file }
     num = usable_testfiles.length
     puts "Benchmarking #{num} files..."
 

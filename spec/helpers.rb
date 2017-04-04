@@ -7,7 +7,7 @@ module Helpers
   @@destination = File.join(File.dirname(__FILE__), 'testfiles', 'tmp')
 
   def setup_files
-    @source = File.join(File.dirname(__FILE__), 'testfiles', '75804')
+    @source = File.join(File.dirname(__FILE__), 'testfiles', 'test')
     FileUtils.copy_entry @source, @@destination
   end
 
