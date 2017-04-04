@@ -33,7 +33,7 @@ module HttpSpace
       mycsv.each { |row|
         @provenance_all << {"id" => row["id"],
                            "uri" => row["dc.identifier.uri"],
-                           "provenance" => row["dc.description.provenance"]}
+                           "provenance" => row["dc.description.provenance[en]"]}
       }
     end
 
@@ -92,12 +92,12 @@ module HttpSpace
       def write_csv
         original_info = get_original_info
         updated_info = [
-          original_info[:id],
+          original_info["id"],
           # Concatenate original and new provenance with dspace special
           # character.
           # If we try to import a csv file with just the updated provenance,
           # it will *overwrite*, not append, so we need to keep the original.
-          original_info[:provenance] + "||" + METS.provenance
+          original_info["provenance"] + "||" + METS.provenance
         ]
         CSV.open(@current_csv, "a") do |csv|
           csv << updated_info
@@ -121,7 +121,7 @@ module HttpSpace
       def get_original_info
         file_id = File.basename(@zipfile, '.zip')
         @provenance_all.find { |obj|
-          obj[:uri] == "http://hdl.handle.net/1721.1/#{file_id}"
+          obj["uri"] == "http://hdl.handle.net/1721.1/#{file_id}"
         }
       end
 
