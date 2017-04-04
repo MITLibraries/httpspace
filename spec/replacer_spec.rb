@@ -23,6 +23,7 @@ RSpec.describe Replacer do
     expect(Replacer.links_processed).to eq(1)
   end
 
+  # Note that this file includes an http://ocw5.mit.edu link too
   it "finds all the http://ocw.mit.edu links in html" do
     testfile = File.join(@destination, 'bitstream_1024212.htm')
     Replacer.update([testfile])
@@ -40,6 +41,18 @@ RSpec.describe Replacer do
     file2 = File.join(@destination, 'bitstream_1024212.htm')
     Replacer.update([file1, file2])
     expect(Replacer.links_processed).to eq(87)
+  end
+
+  it "finds archive.org links" do
+    testfile = File.join(@destination, 'bitstream_1023956.htm')
+    Replacer.update([testfile])
+    expect(Replacer.links_processed).to eq(1)
+  end
+
+  it "finds youtube.com links" do
+    testfile = File.join(@destination, 'bitstream_1024105.css')
+    Replacer.update([testfile])
+    expect(Replacer.links_processed).to eq(1)
   end
 
   it "does not choke on non-files" do

@@ -1,7 +1,10 @@
 /**
-* @file: highslide.css 
+* @file: highslide.css
 * @version: 4.1.8
 */
+
+/* This is a spurious link for testing purposes: http://foo.youtube.com */
+
 .highslide-container div {
 	font-family: Verdana, Helvetica;
 	font-size: 8pt;
