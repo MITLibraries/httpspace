@@ -1,0 +1,41 @@
+                         6.868/MAS.731J: Society of Mind Spring 2007, April 15 
+Lecture 8: Problem Set 8 (Due Friday Apr. 20) 
+Reading: Emotion Machine, Chapter 7 
+Problem 1 
+In order to find meaningful answers you must first be able to formulate 
+good questions. List ten questions you would like to answer about 
+Chapter 7. 
+Problem 2 
+On pg. 229−230, Minsky lists examples of critics and selectors for 
+the top 4 layers (deliberative, reflective, self−reflective, and 
+self−conscious). For example, in the deliberative layer, "An 
+action did not achieve the expected effect" is a critic, while 
+"Find a better way to predict" is a selector that this critic 
+activates. 
+a) For each of these four layers, list two additional 
+critic−selector pairs. 
+b) Describe a way to activate a common Emotion as a way to think, 
+such as Anger, Compassion, Pity, Empathy, or Sympathy, in terms 
+of description of critic−selector pairs. 
+c) Think about implementing a critic. What would it mean for the 
+critic to be ’activated’. Explain how this could be done 
+and what other computational resources would be required. (For 
+ideas, consult Push Singh’s PhD thesis.) 
+Problem 3 
+Section 7−4 discusses many different examples of useful ways to think. 
+a) Choose your favorite three of these ways to think and give an example 
+of each. 
+b) Think of your own problem that can’t be solved by any of these ways to 
+think. 
+c) Describe a new way to think that can solve this problem. 
+Problem 4 
+Solving the problems in this problem set could be considered an intelligent 
+task. 
+a) Describe at least three critic−selector pairs that helped you to solve 
+the problems in this problem set. 
+b) Try to categorize the critics and selectors of part (a) into the 
+layers of Model−6. Discuss why you chose the classification for each 
+critic or selector resource. 
+Cite as: Marvin Minsky, course materials for 6.868J/MAS.731J The Society of Mind, Spring 2007. 
+MIT OpenCourseWare (http://ocw.mit.edu/), Massachusetts Institute of Technology.
+Downloaded on [DD Month YYYY].

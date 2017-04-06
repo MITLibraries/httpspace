@@ -1,0 +1,47 @@
+                      6.868/MAS.731J: Society of Mind Spring 2007, February 18 
+Lecture 2: Problem Set 2 (Due Friday, Feb. 23) 
+Reading: Minsky and Papert, "Progress Report on Artificial Intelligence" 1971 
+Problem 1 
+An analogy completion problem is succinctly described as "A is to B as C is 
+to which one of these (D)?" 
+a) Make up an analogy completion problem that is different from the 
+simple visual analogy completion problem at the beginning of the 
+progress report. This does not necessarily have to be visual! 
+b) Make a description for "A" and a description for "C". 
+c) Find a way to change your description of "A" so that it describes "B". 
+Make up a description for this way to change. 
+d) Use your answer to part (c) to change your description of "B" into a 
+new description. If this new description is not helpful in solving 
+the analogy problem, then repeat this process potentially using 
+different descriptions of "A", "B", "C", and the way to change "A" to 
+"C". 
+Problem 2 
+Minsky and Papert briefly discuss how young children draw very simple 
+representations of complex objects, such as other humans. 
+a) Why would asking a child to draw help us to understand how humans 
+think about drawing? 
+b) What would be some differences between what might be learned from 
+asking a child to draw and asking a professional artist to draw? 
+c) How would you program a computer to learn to draw a better nose, such 
+as the child described in the report? Describe the change that would 
+occur in the computer’s internal descriptions of how to draw a face. 
+Problem 3 
+Minsky and Papert state, 
+"The community of ideas in the area of computer science makes a real change 
+in the range of available concepts. Before this, we had too feeble a 
+family of concepts to support effective theories of intelligence, learning, 
+and development. ... Computer science has brought a flood of such ideas, 
+well defined and experimentally implemented, for thinking about thinking; 
+only a fraction of them have distinguishable representations in 
+traditional psychology: <list> ... All these serve today as tools of a 
+curious and intricate craft, programming. But just as astronomy succeeded 
+astrology, following Kepler’s discovery of planetary regularities, the 
+discoveries of these many principles in empirical explorations of 
+intellectual processes in machines should lead to a science, eventually." 
+a) Think of five computer science ideas and explain how they can help to 
+think about human psychology. 
+b) Think of five psychology or neuroscience ideas and explain how they 
+have helped to think about computer science. 
+Cite as: Marvin Minsky, course materials for 6.868J/MAS.731J The Society of Mind, Spring 2007. 
+MIT OpenCourseWare (http://ocw.mit.edu/), Massachusetts Institute of Technology.
+Downloaded on [DD Month YYYY].

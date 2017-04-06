@@ -1,0 +1,192 @@
+                                    
+This is an archived course. A more recent version may be available at ocw.mit.edu.
+ 
+Subscribe to the OCW Newsletter
+ 
+ 
+  
+Help   |   Contact Us
+ 
+  
+ 
+Courses 
+Find courses by:
+Topic
+MIT Course Number
+Department
+Collections
+Audio/Video Lectures
+New Courses
+Most Visited Courses
+OCW Scholar Courses
+This Course at MIT
+Supplemental Resources
+ 
+Cross-Disciplinary Topic Lists
+Energy
+Entrepreneurship
+Environment
+Introductory Programming
+Life Sciences
+Transportation
+ 
+ 
+Translated Courses
+繁體字 / Traditional Chinese
+简体字 / Simplified Chinese
+Español / Spanish
+Português / Portuguese
+ภาษาเขียน / Thai
+فارسی / Persian
+Türkçe / Turkish
+(비디오)한국 / Korean
+More...
+About
+About MIT OpenCourseWare
+Site Stats
+OCW Stories
+OpenCourseWare Consortium
+Media Coverage
+Newsletter
+Press Releases
+OCW's Next Decade
+Donate
+Make a Donation
+Why Donate?
+Become a Course Champion
+Our Supporters
+Other Ways to Contribute
+Shop OCW
+Become a Corporate Sponsor
+Featured Sites
+Highlights for High School
+MITx
+Teaching Excellence at MIT
+           
+ 
+ 
+Advanced Search
+
+ 
+ 
+ 
+Home » Courses » Electrical Engineering and Computer Science » The Society of Mind
+
+The Society of Mind
+
+    
+Course Home 
+Syllabus 
+Audio Lectures 
+Readings 
+Assignments 
+Related Resources 
+ 
+ 
+ 
+Neurons in a column. This course focuses on understanding how the mind works and how to replicate human thinking in a machine. (Image courtesy of Ethan Hein on Flickr.)
+
+Instructor(s)
+Prof. Marvin Minsky
+MIT Course Number
+6.868J / MAS.731J
+As Taught In
+Spring 2007
+Level
+Graduate
+ 
+
+   
+Course Description
+Related Content
+Course Features
+Selected video lectures
+Audio lectures
+Projects (no examples)
+Assignments (no solutions)
+Course Highlights
+Marvin Minsky has made significant contributions to the field of Artificial Intelligence, and this course, along with his book of the same title, illuminates new ideas on thinking and how the mind works.
+Course Description
+This course is an introduction to a theory that tries to explain how minds are made from collections of simpler processes. The subject treats such aspects of thinking as vision, language, learning, reasoning, memory, consciousness, ideals, emotions, and personality. Ideas incorporate psychology, artificial intelligence, and computer science to resolve theoretical issues such as whole vs. parts, structural vs. functional descriptions, declarative vs. procedural representations, symbolic vs. connectionist models, and logical vs. common-sense theories of learning.
+Course Collections
+See related courses in the following collections:
+Find Courses by Topic
+Computer Science > Artificial Intelligence
+Cognitive Science
+Psychology
+ 
+ 
+ 
+ 
+ 
+
+  
+
+ 
+
+ 
+Minsky, Marvin. 6.868J The Society of Mind, Spring 2007. (MIT OpenCourseWare: Massachusetts Institute of Technology), http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-868j-the-society-of-mind-spring-2007 (Accessed). License: Creative Commons BY-NC-SA
+ 
+For more information about using these materials and the Creative Commons license, see our Terms of Use.
+ 
+ 
+ 
+Courses
+Find by Topic
+Find by Course Number
+Find by Department
+Audio/Video Courses
+New Courses
+Most Visited Courses
+OCW Scholar Courses
+This Course at MIT
+Supplemental Resources
+Translated Courses
+About
+About OpenCourseWare
+Site Stats
+OCW Stories
+OCW Consortium
+Media Coverage
+Newsletter
+Press Releases
+OCW's Next Decade
+Donate
+Make a Donation
+Why Donate?
+Become a Course Champion
+Our Supporters
+Other Ways to Contribute
+Shop OCW
+Become a Corporate Sponsor
+Featured Sites
+Highlights for High School
+MITx
+Teaching Excellence at MIT
+Tools
+Help & FAQs
+Contact Us
+Advanced Search
+Site Map
+Privacy & Terms of Use
+RSS Feeds
+About MIT OpenCourseWare
+MIT OpenCourseWare makes the materials used in the teaching of almost all of MIT's subjects available on the Web, free of charge. With more than 2,200 courses available, OCW is delivering on the promise of open sharing of knowledge.
+   
+© 2001–2014 Massachusetts Institute of Technology
+Your use of the MIT OpenCourseWare site and materials is subject to our Creative Commons License and other terms of use.
+Our Corporate Supporters
+ 
+   
+ 
+   
+ 
+   
+ 
+   
+ 
+   
+ 
+   
+ 
+ 

@@ -1,0 +1,100 @@
+                       6.868/MAS.731J: Society of Mind Spring 2007, March 11th
+
+Lecture 7: Problem Set 6 (Due Wednesday April 4th, 7:00PM)
+
+Reading: (a) Emotion Machine, Chapter 5
+
+(b) EM−ONE: An architecture for reflective commonsense thinking, 11−26.
+
+Problem 1
+
+In order to find meaningful answers you must first be able to formulate good 
+
+questions. List ten questions you would like to answer about Chapter 5.
+
+Problem 2
+
+In this chapter, Minsky describes the layers of Model−6. These layers are
+
+useful for categorizing thought processes−−i.e. self−reflective layers focus
+
+on debugging and building models of the system’s own abilities and
+
+limiations.
+
+a) List 5 reasons why developing a way to classify thought processes 
+
+can be useful. 
+
+Problem 3
+
+In class, Marvin has described his experience with learning how to play
+
+chess where, as a beginner, moving the knight required interpreting rules.
+
+With more experience, he was able to visualize the appropriate 8 positions
+
+’immediately’.
+
+a) In psychology, this phenomenon is known as chunking; and in computer
+
+science: compiling. Describe another type of learning where this 
+
+takes place and relate it aspects of compiling software.
+
+b) In Cyc, unlike people its reasoning performance does not improve
+
+with repetition. What could you add to Cyc to give it this ability?
+
+Problem 4
+
+In the section on Learned Reactions, Minsky describes how IF−>DO rule
+
+alone are not enough because there are always exceptions for each rule, 
+
+which would make the assertion false. 
+
+a) What benefits does adding ’THEN’ to IF−>DO rules provide?
+
+b) Describe a process that would allow a knowledge base to keep a useful
+
+rule even though it has many exceptions. 
+
+Problem 5
+
+A big problem with using rules as a representation is knowing the level
+
+of descriptions to include within the conditional. If the description is
+
+to vague/ambiguous, it may match too many cases; however, if it is too 
+
+specific or precise, it may never match another situation!
+
+Commonsense knowledge consists of generalizations;, there are often
+
+exceptions for each assertion or rule, and commonsense knowledge is
+
+densely interconnected. Because of this, it is indirect to talk about
+
+assertions being ’true’ or ’false’ without describing context or the 
+
+desired inference. Instead, we can characterize knowledge as ’useful’ 
+
+within the context of solving a specific problem.
+
+a) Take a look at the first 500 entries in the OpenMind project,
+
+http://web.media.mit.edu/~dustin/6.868/omcs−h500.txt , choose 
+
+Cite as: Marvin Minsky, course materials for 6.868J/MAS.731J The Society of Mind, Spring 2007. 
+MIT OpenCourseWare (http://ocw.mit.edu/), Massachusetts Institute of Technology.
+Downloaded on [DD Month YYYY].
+your favorite 5 assertions and describe problem contexts in which 
+
+that knowledge would be useful for solving the problem.
+
+[Answering questions is one type of problem solving]
+
+Cite as: Marvin Minsky, course materials for 6.868J/MAS.731J The Society of Mind, Spring 2007. 
+MIT OpenCourseWare (http://ocw.mit.edu/), Massachusetts Institute of Technology.
+Downloaded on [DD Month YYYY].

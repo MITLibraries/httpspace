@@ -1,0 +1,236 @@
+                                    
+This is an archived course. A more recent version may be available at ocw.mit.edu.
+ 
+Subscribe to the OCW Newsletter
+ 
+ 
+  
+Help   |   Contact Us
+ 
+  
+ 
+Courses 
+Find courses by:
+Topic
+MIT Course Number
+Department
+Collections
+Audio/Video Lectures
+New Courses
+Most Visited Courses
+OCW Scholar Courses
+This Course at MIT
+Supplemental Resources
+ 
+Cross-Disciplinary Topic Lists
+Energy
+Entrepreneurship
+Environment
+Introductory Programming
+Life Sciences
+Transportation
+ 
+ 
+Translated Courses
+繁體字 / Traditional Chinese
+简体字 / Simplified Chinese
+Español / Spanish
+Português / Portuguese
+ภาษาเขียน / Thai
+فارسی / Persian
+Türkçe / Turkish
+(비디오)한국 / Korean
+More...
+About
+About MIT OpenCourseWare
+Site Stats
+OCW Stories
+OpenCourseWare Consortium
+Media Coverage
+Newsletter
+Press Releases
+OCW's Next Decade
+Donate
+Make a Donation
+Why Donate?
+Become a Course Champion
+Our Supporters
+Other Ways to Contribute
+Shop OCW
+Become a Corporate Sponsor
+Featured Sites
+Highlights for High School
+MITx
+Teaching Excellence at MIT
+           
+ 
+ 
+Advanced Search
+
+ 
+ 
+ 
+Home » Courses » Electrical Engineering and Computer Science » The Society of Mind » Syllabus
+
+Syllabus 
+
+    
+Course Home 
+Syllabus 
+Audio Lectures 
+Readings 
+Assignments 
+Related Resources 
+ 
+ 
+Course Meeting Times
+Lectures: 1 session / week, 2 hours / session
+Course Overview
+The subject of this course is to discuss theories about how our minds work. We will emphasize aspects of thinking that are so poorly understood that they are still considered to be more philosophical than scientific. These issues have never been understood because of our traditional image of the mind as controlled by a single, central Self. The folly of this becomes obvious when you think about how to build systems to do things that might help answer questions like these:
+How do children learn about morality and social goals?
+How does one learn a new way to think to handle a new type of situation?
+How do minds switch between different representations and methods of reasoning?
+Why do we like jokes?
+Why do we like music?
+What are ideas?
+What is pain and why does it hurt?
+What is consciousness?
+What use are emotions?
+What is the nature of Self?
+What controls the subjects you think about?
+Our goal is to replace ill-defined folk theories of 'consciousness', 'self' and 'emotion' with other concepts that are more useful for engineers to build, psychologists to manipulate, and individuals to control.
+Caveat Emptor
+This course is for students who have already read The Society of Mind. Without that background, it will be hard to learn from the lectures. This subject is still highly speculative, and many students find that it lacks the precision found in more mature areas. Furthermore, people have different learning styles, and you may find my teaching style to be too experimental and improvisatory for you. Do not hesitate to drop the subject early if you find such an incompatibility. In any case, to help make the class seminar interactive, you should always come prepared with some issue to discuss.
+Required Textbooks
+ Minsky, Marvin. The Society of Mind. New York, NY: Simon and Schuster, 1988. ISBN: 9780671657130.
+ ———. The Emotion Machine: Commonsense Thinking, Artificial Intelligence, and the Future of the Human Mind. New York, NY: Simon and Schuster, 2006. ISBN: 9780743276634.
+Grading
+There will be no final exam in this class. Your homework will consist of weekly directed reading responses, a brief proposal for a final project (not graded) and a final project.
+Grading criteria.
+ACTIVITIES
+PERCENTAGES
+Discussion participation
+20%
+Weekly assignments
+40%
+Final project
+40%
+ 
+
+Calendar
+Course calendar.
+SES #
+TOPICS
+KEY DATES
+1
+Introduction
+Problem set 1 out
+2
+Falling in love
+Problem set 1 due
+Problem set 2 out
+3
+Guest lecturer
+Google™ video: Computers versus Common Sense by Doug Lenat
+Problem set 2 due two days after Ses #3
+Problem set 3 out
+4
+Attachments and goals
+Problem set 3 due two days after Ses #4
+Problem set 4 out
+5
+From pain to suffering
+Problem set 4 due two days after Ses #5
+6
+Consciousness
+Problem set 5 out
+7
+Consciousness (cont.)
+Problem set 5 due
+Problem set 6 out
+8
+Levels of mental activities
+Problem set 6 due
+Problem set 7 out
+9
+Common sense
+Problem set 7 due
+Problem set 8 out
+10
+Thinking
+Problem set 8 due two days after Ses #10
+Problem set 9 out
+11
+Resourcefulness
+Final project proposals due
+12
+Resourcefulness (cont.)
+Problem set 9 due two days after Ses #12
+13
+The self
+Final projects due
+ 
+
+ 
+ 
+ 
+ 
+Courses
+Find by Topic
+Find by Course Number
+Find by Department
+Audio/Video Courses
+New Courses
+Most Visited Courses
+OCW Scholar Courses
+This Course at MIT
+Supplemental Resources
+Translated Courses
+About
+About OpenCourseWare
+Site Stats
+OCW Stories
+OCW Consortium
+Media Coverage
+Newsletter
+Press Releases
+OCW's Next Decade
+Donate
+Make a Donation
+Why Donate?
+Become a Course Champion
+Our Supporters
+Other Ways to Contribute
+Shop OCW
+Become a Corporate Sponsor
+Featured Sites
+Highlights for High School
+MITx
+Teaching Excellence at MIT
+Tools
+Help & FAQs
+Contact Us
+Advanced Search
+Site Map
+Privacy & Terms of Use
+RSS Feeds
+About MIT OpenCourseWare
+MIT OpenCourseWare makes the materials used in the teaching of almost all of MIT's subjects available on the Web, free of charge. With more than 2,200 courses available, OCW is delivering on the promise of open sharing of knowledge.
+   
+© 2001–2014 Massachusetts Institute of Technology
+Your use of the MIT OpenCourseWare site and materials is subject to our Creative Commons License and other terms of use.
+Our Corporate Supporters
+ 
+   
+ 
+   
+ 
+   
+ 
+   
+ 
+   
+ 
+   
+ 
+ 

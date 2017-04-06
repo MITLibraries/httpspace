@@ -1,0 +1,40 @@
+                      6.868/MAS.731J: Society of Mind Spring 2007, February 25 
+Lecture 3: Problem Set 3 (Due Mar. 2) 
+Reading: Emotion Machine, Chapter 2 
+Problem 1 
+In order to find meaningful answers you must first be able to formulate 
+good questions. List ten questions you would like to answer about 
+Chapter 2. 
+Problem 2 
+Minsky states, "Our language uses a great many words for referring to our 
+emotional states. When we described Carol’s playing with mud, we used more 
+than a dozen of them−−Affection, Alarm, Anxiety, Assurance, Disappointment, 
+Disgrace, Disturbance, Frustration, Fear, Inclination, Pleasure, Pride, 
+Satisfaction, Shame, and Sorrow." 
+a) What are three different goals that are pursued in the different 
+versions of the story in the chapter? 
+b) Make a small subgoal tree for each of these different goals. 
+Problem 3 
+Regarding Remembering, Minsky explains that "On the surface, it might seem 
+easy enough−−like dropping a note into a box and then taking it out when 
+you need it. But when we look more closely, we see that this must involve 
+many processes: you first must decide what items your note should contain, 
+and find suitable ways to represent them−−and then you must make some 
+connections to them so that after you store those parts away, you’ll be 
+able to reassemble them." 
+a) What are examples of the types of items that your note should contain? 
+For example, you might need to later recall prerequisites for a 
+successful action toward a goal. Try to think of at least three types 
+of items related to mental events as well as three related to external 
+events. 
+b) Minsky discourages the simplistic notion of pure hierarchies of goals. 
+What are at least three other additional representations that could 
+help for describing your answers to part (a)? 
+Problem 4 
+Minsky discusses many different types of Imprimers in Chapter 2. 
+a) List three different types of imprimers from the chapter. 
+b) Give three examples of goals from the different types of goals that 
+each of these different types of imprimer affect. 
+Cite as: Marvin Minsky, course materials for 6.868J/MAS.731J The Society of Mind, Spring 2007. 
+MIT OpenCourseWare (http://ocw.mit.edu/), Massachusetts Institute of Technology.
+Downloaded on [DD Month YYYY].

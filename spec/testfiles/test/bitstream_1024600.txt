@@ -1,0 +1,102 @@
+                      6.868/MAS.731J: Society of Mind Spring 2007, March 3rd
+
+Lecture 4: Problem Set 4 (Due Mar. 9)
+
+Reading: Emotion Machine, Chapter 3
+
+Problem 1
+
+Minsky: "What makes feelings so hard to describe? Is this because feelings are
+
+so simple and basic that there’s nothing more to be said about them? No, its 
+
+precisely the opposite, because...what we call feelings are the results of 
+
+attempts (by some parts of one’s mind) to describe entire mental conditions.
+
+However, every mental state is so complex that any brief description of it 
+
+could capture just a few aspects of it."
+
+a) How does this imply a limitation on our introspective abilities?
+
+b) How does this relate to using abstract or ambiguous terminology?
+
+Problem 2
+
+The words we use to describe emotions (eg, ’happy’, ’dazed’) are distinct from 
+
+the complex mental arrangements of resources that these terms try to describe. 
+
+Minsky uses the term "Ways to Think" to describe these large−scale mental 
+
+configurations (such as emotions) in addition to smaller configurations of 
+
+problem solvers. For instance, if you need to catch a taxi, some Ways to Think
+
+about the problem are:
+
+− Wait outside for the taxi
+
+− Call the company to ask for one to be sent
+
+− Walk to a place you expect to find a taxi
+
+a) Describe another common problem and several Ways to Think about it.
+
+Problem 3
+
+Specify the four critics (corrector, suppressor, censor and encourager [p86])
+
+in this story:
+
+"Joan is applying for a job at two AI companies, ’Intelligence Vacuum’ and 
+
+’Emergent Design’, and begins to write applications. In her first email, she 
+
+discusses her credentials, education and a question about her salary. After 
+
+she sends the email, she reflects and concludes that it was premature to 
+
+discuss financial issues. Joan begins her next email, this time she only 
+
+includes education and her credentials. In the credentials section, she 
+
+sees a great opportunity for a joke and lists her programming skills, "LISP,
+
+C and SNOBOL," under the title ’Foreign Languages.’ Impressed with her humor,
+
+she thinks about inserting an emoticon ’:−)’ but does not. Ending her email, 
+
+she misspells her name and then quickly corrects it before sending."
+
+Problem 4
+
+In 3−8, Minsky discusses emotional exploitation as a method of self−control.
+
+Describe how you conjure memories to indirectly control your reactions to 
+
+these situations:
+
+example) You want to study for a test, and you are tired. 
+
+Conjure a memory of failing the test to elicit a Fearful state, or
+
+Imagine a competition between another colleague to obtain Anger.
+
+a) You are on a diet, and want to eat Double Fudge ice cream.
+
+b) You want a good grade, and you are bored in class.
+
+c) You want to yell at a police officer, and not be arrested.
+
+Cite as: Marvin Minsky, course materials for 6.868J/MAS.731J The Society of Mind, Spring 2007. 
+MIT OpenCourseWare (http://ocw.mit.edu/), Massachusetts Institute of Technology.
+Downloaded on [DD Month YYYY].
+Bonus
+
+In 4,000 words or fewer, describe how you are feeling.
+
+Cite as: Marvin Minsky, course materials for 6.868J/MAS.731J The Society of Mind, Spring 2007. 
+MIT OpenCourseWare (http://ocw.mit.edu/), Massachusetts Institute of Technology.
+Downloaded on [DD Month YYYY].

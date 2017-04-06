@@ -1,0 +1,30 @@
+                          6.868/MAS.731J: Society of Mind Spring 2007, April 5 
+Lecture 7: Problem Set 7 (Due Apr. 11) 
+Reading: Emotion Machine, Chapter 6 
+Problem 1 
+In order to find meaningful answers you must first be able to formulate 
+good questions. List ten questions you would like to answer about 
+Chapter 6. 
+Problem 2 
+You could think of scripts as compiled plans. 
+a) Write a script for going to a restaurant as a sequence of actions. 
+For an example of a script, see pg. 192−3. 
+b) List the transframes in each applicable mental realm (the Panalogy 
+representation) for each step of the script. 
+c) Imagine now that you are trying to plan for cooking some food at home. 
+Do the same thing you did in parts (a,b) for this second plan. 
+d) Now list the similarities and differences between the panalogies in 
+your two scripts. This will form a matrix−like structure. 
+Note that the process of adapting the second plan from the first 
+script, by analogy, could be described as actions within a 
+reflective−level script! 
+Problem 3 
+Imagine a situation in which you are hungry. 
+a) List what this knowledge would look like (e.g., your goals, 
+your environment). Consider this knowledge to be reactive. 
+b) Describe two deliberative level critics that can select between 
+these two eating−plans from Problem 2 using some of the knowledge 
+in the reactive level. 
+Cite as: Marvin Minsky, course materials for 6.868J/MAS.731J The Society of Mind, Spring 2007. 
+MIT OpenCourseWare (http://ocw.mit.edu/), Massachusetts Institute of Technology.
+Downloaded on [DD Month YYYY].

@@ -1,0 +1,41 @@
+                       6.868/MAS.731J: Society of Mind Spring 2007, February 7 
+Lecture 1: Problem Set 1 (Due Feb. 14) 
+Reading: Emotion Machine, Chapter 0 (Preface) 
+Emotion Machine, Chapter 1 
+Problem 1 
+In order to find meaningful answers you must first be able to formulate 
+good questions. List ten questions you would like to answer about 
+Chapter 1. 
+Problem 2 
+Minsky explains that our culture does not have a rich enough vocabulary 
+and conceptual lexicon to describe most mental processes. For example, the 
+popular term "consciousness" refers to a vast number of different cognitive 
+processes, which make it difficult to ask meaningful questions about how 
+minds work and build intelligent systems. 
+a) List some other vague terms, besides the ones described in Chapter 1. 
+b) Describe the advantages and disadvantages of using ambiguous or 
+abstract terminology. 
+c) Unpack another emotional suitcase word and describe examples of 
+various "senses" of the term. 
+Problem 3 
+In some situations emotions can be useful ways of thinking, while in others 
+these same ways of thinking can be detrimental. For example, if one sees 
+their child walking near a cliff, becoming Anxious is a very relevant 
+response that hones the senses and primes fast motor reactions. However, 
+in the context of taking a test, some people feel Test Anxiety, a related 
+emotion, where these same effects make it difficult for complex ways of 
+thinking to operate without being distracted by these same "fight or 
+flight" reactions. 
+a) Pick three emotions and describe their characteristics, as turning on 
+or off resources. 
+b) Using these same emotions, describe situations where these emotions 
+and their characteristics would be helpful. Describe situations where 
+these characteristics would be detrimental. 
+Problem 4 
+Chapter 1 describes different kinds of Love. Make different models of at 
+least three different kinds of Love from the chapter. What characteristics 
+or mental resources do these models share and what resources are unique to 
+different kinds of Love? 
+Cite as: Marvin Minsky, course materials for 6.868J/MAS.731J The Society of Mind, Spring 2007. 
+MIT OpenCourseWare (http://ocw.mit.edu/), Massachusetts Institute of Technology.
+Downloaded on [DD Month YYYY].

@@ -1,0 +1,112 @@
+                       6.868/MAS.731J: Society of Mind Spring 2007, March 11th
+
+Lecture 5: Problem Set 5 (Due WEDNESDAY Mar. 21)
+
+Reading: Emotion Machine, Chapter 4
+
+Problem 1
+
+In order to find meaningful answers you must first be able to formulate
+
+good questions. List ten questions you would like to answer about
+
+Chapter 4.
+
+Problem 2
+
+Regarding the word Consciousness, Minsky states, "I’ll argue that it would
+
+be a mistake to believe in any such entity−−because we ought to be asking
+
+this question, instead: ‘Isn’t it remarkable that any single word or phrase
+
+could have come to mean so many different things?’"
+
+Packing too many ideas into one suitcase word like consciousness doesn’t
+
+get us very far, unpack some of the different ideas that we talk about
+
+when we refer to consciousness.
+
+Problem 3
+
+"Sam is an MIT freshman trying to start a Punk band, while studying
+
+Linguistics. While Sam is planning his week, he notices a big red circle
+
+around Wednesday on his calendar and realizes that he has scheduled a punk
+
+gig at All Asia for the night before his Neurolinguistics midterm−−not
+
+allowing for the customary study time. Sam then gets depressed because he 
+
+realizes that he is always making conflicting plans like this. He thinks
+
+about what his Dad would say about getting so upset and makes a resolute
+
+decision to plan ahead next time."
+
+a) Using this story about Sam and the layers from Model−6 below to
+
+categorize the different levels of reflection.
+
+1. Reactive
+
+2. Learned−reactive
+
+3. Deliberative
+
+4. Reflective
+
+5. Self−reflective
+
+6. Self−conscious
+
+b) Now make up a description of one sequence of your thought processes that
+
+contains an example of each of Minsky’s 6−layers of reflection.
+
+Problem 4
+
+Knowledge representations are only as good as they are useful for solving
+
+problems. Minsky discusses the many different models that Jane uses of
+
+herself in the Cartesian Theater example.
+
+a) What are some reasons why you would need to switch between many small
+
+models rather than just using one complete model for all problems?
+
+b) Describe some of the resources that would be involved in managing
+
+different self−models. Discuss the tradeoffs of maintaining
+
+consistent versus inconsistent self−models.
+
+c) Think of and describe a way to change self−models, such as in the
+
+context of learning a new programming language or sport.
+
+Cite as: Marvin Minsky, course materials for 6.868J/MAS.731J The Society of Mind, Spring 2007. 
+MIT OpenCourseWare (http://ocw.mit.edu/), Massachusetts Institute of Technology.
+Downloaded on [DD Month YYYY].
+Problem 5 
+Think of and describe five project ideas that you would be interested 
+in actually doing. Here are a few sample project ideas: 
+− Managing multiple problem solvers in one architecture. 
+− Implement a planning system that uses reflection to get unstuck. 
+− Implementing a system that learns Critics, Suppressors, and Censors. 
+− A ’bipolar critic−selector’ search process applied to a planning 
+domain. 
+− Choose a mental disorder from psychology, such as ADHD, and 
+translate and analyze it in terms of Minsky’s model. 
+− Describe a language model that uses multiple representations such as 
+different levels of detail or different points of view. 
+− An application that uses and changes self−models depending on the 
+current problem or feedback from imprimers. 
+− Implement a system of Panalogies reasoning with multiple 
+representations. 
+Cite as: Marvin Minsky, course materials for 6.868J/MAS.731J The Society of Mind, Spring 2007. 
+MIT OpenCourseWare (http://ocw.mit.edu/), Massachusetts Institute of Technology.
+Downloaded on [DD Month YYYY].

@@ -1,0 +1,30 @@
+                         6.868/MAS.731J: Society of Mind Spring 2007, April 13 
+Final Project Proposal (Due Tuesday Apr. 24) 
+One page final project descriptions are due Tuesday April 24th. Only one 
+submission is necessary for each group. Proposals should include: 
+1. A description of your final project 
+a) what are your objectives for the project? 
+b) how does this relate to Emotion Machine/Society of Mind? 
+c) how do you plan to accomplish your objectives? 
+2. A list of group members 
+There is a lot of freedom in the final project assignment. You can write a 
+paper or write a program, alone or as group. 
+** Your project must first be approved by the TAs! ** So, before you submit 
+your proposal you should arrange to meet at least once with the TAs (schedules 
+are on Wiki) Bring several ideas with you to these meetings. 
+Final Project Options (due Friday May 18th) 
+Option 1 
+Write an essay (10−15 pages, 1.5 spaced font). 
+a) Explore some idea or aspect of the Emotion Machine theory in detail. 
+b) Write a survey essay covering at least 15 research papers spanning 
+multiple academic fields and relating these to the theory. 
+For example, multi−strategy machine learning, a mental disorder, 
+developmental neuropsychology, cognitive architectures, reflection 
+and self−reflection (self−models and reflection). 
+Option 2 
+Program an implementation of an aspect of the theory with a short 
+essay describing what it does and how it works. 
+Final project is 40% of your grade. 
+Cite as: Marvin Minsky, course materials for 6.868J / MAS.731J The Society of Mind, Spring 2007. 
+MIT OpenCourseWare (http://ocw.mit.edu/), Massachusetts Institute of Technology.
+Downloaded on [DD Month YYYY].

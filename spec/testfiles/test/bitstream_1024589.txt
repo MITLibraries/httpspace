@@ -1,0 +1,202 @@
+                                    
+This is an archived course. A more recent version may be available at ocw.mit.edu.
+ 
+Subscribe to the OCW Newsletter
+ 
+ 
+  
+Help   |   Contact Us
+ 
+  
+ 
+Courses 
+Find courses by:
+Topic
+MIT Course Number
+Department
+Collections
+Audio/Video Lectures
+New Courses
+Most Visited Courses
+OCW Scholar Courses
+This Course at MIT
+Supplemental Resources
+ 
+Cross-Disciplinary Topic Lists
+Energy
+Entrepreneurship
+Environment
+Introductory Programming
+Life Sciences
+Transportation
+ 
+ 
+Translated Courses
+繁體字 / Traditional Chinese
+简体字 / Simplified Chinese
+Español / Spanish
+Português / Portuguese
+ภาษาเขียน / Thai
+فارسی / Persian
+Türkçe / Turkish
+(비디오)한국 / Korean
+More...
+About
+About MIT OpenCourseWare
+Site Stats
+OCW Stories
+OpenCourseWare Consortium
+Media Coverage
+Newsletter
+Press Releases
+OCW's Next Decade
+Donate
+Make a Donation
+Why Donate?
+Become a Course Champion
+Our Supporters
+Other Ways to Contribute
+Shop OCW
+Become a Corporate Sponsor
+Featured Sites
+Highlights for High School
+MITx
+Teaching Excellence at MIT
+           
+ 
+ 
+Advanced Search
+
+ 
+ 
+ 
+Home » Courses » Electrical Engineering and Computer Science » The Society of Mind » Readings
+
+Readings 
+
+    
+Course Home 
+Syllabus 
+Audio Lectures 
+Readings 
+Assignments 
+Related Resources 
+ 
+ 
+Additional readings can be found in the Commonsense Bibliography located in the Related Resources section.
+Required Textbooks
+ Minsky, Marvin. The Society of Mind. New York, NY: Simon and Schuster, 1988. ISBN: 9780671657130.
+ ———. The Emotion Machine: Commonsense Thinking, Artificial Intelligence, and the Future of the Human Mind. New York, NY: Simon and Schuster, 2006. ISBN: 9780743276634.
+Suggested Readings
+Minsky, Marvin, and Seymour Papert. Progress Report on Artificial Intelligence, 1971. Same as Project MAC progress report VIII, Massachusetts Institute of Technology, Cambridge, MA, July 1970-1971, pp. 129-224.
+Singh, Push. EM-ONE: An Architecture for Reflective Commonsense Thinking. PhD thesis, Massachusetts Institute of Technology, June 2005.
+Hearn, Robert. Building Grounded Abstractions for Artificial Intelligence Programming. Masters thesis, Massachusetts Institute of Technology, June 2001.
+Readings by Session
+The readings assigned during a session were discussed at the next week's session.
+Course readings.
+SES #
+TOPICS
+READINGS
+1
+Introduction
+The Emotion Machine, Preface and chapter 1
+2
+Falling in love
+Progress Report on Artificial Intelligence, 1971
+3
+Guest lecturer
+Google video: Computers versus Common Sense by Doug Lenat
+The Emotion Machine, Chapter 2
+4
+Attachments and goals
+The Emotion Machine, Chapter 3
+5
+From pain to suffering
+The Emotion Machine, Chapter 4
+6
+Consciousness
+The Emotion Machine, Chapter 4 (cont.)
+7
+Consciousness (cont.)
+The Emotion Machine, Chapter 5
+Chapter 1 of Singh, Push. EM-ONE: An Architecture for Reflective Commonsense Thinking. PhD thesis, Massachusetts Institute of Technology, June 2005.
+8
+Levels of mental activities
+The Emotion Machine, Chapter 6
+9
+Common sense
+The Emotion Machine, Chapter 7
+10
+Thinking
+ 
+11-12
+Resourcefulness
+The Emotion Machine, Chapter 8
+13
+The self
+The Emotion Machine, Chapter 9
+ 
+
+ 
+ 
+ 
+ 
+Courses
+Find by Topic
+Find by Course Number
+Find by Department
+Audio/Video Courses
+New Courses
+Most Visited Courses
+OCW Scholar Courses
+This Course at MIT
+Supplemental Resources
+Translated Courses
+About
+About OpenCourseWare
+Site Stats
+OCW Stories
+OCW Consortium
+Media Coverage
+Newsletter
+Press Releases
+OCW's Next Decade
+Donate
+Make a Donation
+Why Donate?
+Become a Course Champion
+Our Supporters
+Other Ways to Contribute
+Shop OCW
+Become a Corporate Sponsor
+Featured Sites
+Highlights for High School
+MITx
+Teaching Excellence at MIT
+Tools
+Help & FAQs
+Contact Us
+Advanced Search
+Site Map
+Privacy & Terms of Use
+RSS Feeds
+About MIT OpenCourseWare
+MIT OpenCourseWare makes the materials used in the teaching of almost all of MIT's subjects available on the Web, free of charge. With more than 2,200 courses available, OCW is delivering on the promise of open sharing of knowledge.
+   
+© 2001–2014 Massachusetts Institute of Technology
+Your use of the MIT OpenCourseWare site and materials is subject to our Creative Commons License and other terms of use.
+Our Corporate Supporters
+ 
+   
+ 
+   
+ 
+   
+ 
+   
+ 
+   
+ 
+   
+ 
+ 
