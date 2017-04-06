@@ -13,13 +13,16 @@ require_relative "traversal"
 # out to other modules in order to perform the actual work.
 module HttpSpace
   class << self
+    attr_accessor :output_dir
     ##
     # Given a CSV file of OCW collection metadata, records the item handles.
     def get_handles(csvfile)
       mycsv = CSV.read(csvfile, :headers=>true)
       handle_uris = mycsv['dc.identifier.uri']
       handles = handle_uris.reject { |x| x.nil? }.map { |x| x.sub('http://hdl.handle.net/', '') }
-      File.open("item_handles.txt", "w") { |f|
+      outfile = File.join(get_output_dir, "item_handles.txt")
+      system("touch #{outfile}")
+      File.open(outfile, "w") { |f|
         handles.each { |handle| f.puts(handle) }
       }
     end
@@ -33,7 +36,7 @@ module HttpSpace
       mycsv.each { |row|
         @provenance_all << {"id" => row["id"],
                            "uri" => row["dc.identifier.uri"],
-                           "provenance" => row["dc.description.provenance[en]"]}
+                           "provenance" => row["dc.description.provenance"]}
       }
     end
 
@@ -65,7 +68,9 @@ module HttpSpace
           update_csv
 
         rescue
-          File.open("bad_zipfiles.txt", "a") { |f|
+          outfile = File.join(get_output_dir, "bad_zipfiles.txt")
+          system("touch #{outfile}")
+          File.open(outfile, "a") { |f|
             f.puts(File.split(@zipfile)[1])
           }
           next
@@ -78,8 +83,8 @@ module HttpSpace
       ##
       # Starts a CSV file to record new provenance metadata.
       def start_csv
-        project_dir = File.dirname(File.dirname(__FILE__))
-        @current_csv = File.join(project_dir, "provenance_#{@csv_index}.csv")
+        provenance_dir = get_output_dir
+        @current_csv = File.join(provenance_dir, "provenance_#{@csv_index}.csv")
         system("touch #{@current_csv}")
         CSV.open(@current_csv, "wb") do |csv|
           csv << ["id", "dc.description.provenance"]
@@ -91,6 +96,7 @@ module HttpSpace
       # CSV output file.
       def write_csv
         original_info = get_original_info
+        puts original_info
         updated_info = [
           original_info["id"],
           # Concatenate original and new provenance with dspace special
@@ -150,6 +156,10 @@ module HttpSpace
         end
 
         METS.update_metadata(metsfile)
+      end
+
+      def get_output_dir
+        (defined? @output_dir) ? @output_dir : File.dirname(File.dirname(__FILE__))
       end
   end
 

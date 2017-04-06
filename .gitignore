@@ -6,6 +6,7 @@ files_empty/
 files_bad/
 *.csv
 *.txt
+!spec/testfiles
 
 # Created by https://www.gitignore.io/api/osx,ruby
 
