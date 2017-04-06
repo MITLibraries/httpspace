@@ -7,6 +7,7 @@ files_bad/
 *.csv
 *.txt
 !spec/testfiles
+spec/testfiles/test_zip/new*
 
 # Created by https://www.gitignore.io/api/osx,ruby
 

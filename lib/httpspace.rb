@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-require "CSV"
+require "csv"
 require "fileutils"
 require_relative "mets"
 require_relative "replacer"

@@ -1,4 +1,4 @@
-require "CSV"
+require "csv"
 require './lib/helpers'
 
 # Anything you define in Helpers will be automatically available to all tests
