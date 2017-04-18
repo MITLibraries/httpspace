@@ -19,7 +19,8 @@ module METS
       bitstreams = @doc.css('file')
 
       @provenance = <<-EOF.gsub(/^\s+/, '')
-        OCW and media links updated to https by m31@mit.edu on %{date}
+        MIT Libraries updated OCW and media links to https; change made by
+        Andromeda Yelton (m31@mit.edu) on %{date}
         No. of bitstreams updated: %{count}
       EOF
 
