@@ -10,7 +10,7 @@ fi
 touch fetch_errors.txt
 
 while read line; do
-  if /home/dspace/dspace.mit.edu/bin/dspace packager -d -t METS -e m31@mit.edu -i "$line" "$line".zip ; then
+  if nice -19 /home/dspace/dspace.mit.edu/bin/dspace packager -d -t METS -e m31@mit.edu -i "$line" "$line".zip ; then
     echo "$line" gotten
   else
     echo "$line" >> fetch_errors.txt

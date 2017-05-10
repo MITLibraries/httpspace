@@ -7,6 +7,7 @@ We can't do it as a continuous process, because the dspace and bash commands
 need to run on the servers, but the servers don't have ruby. So here are the
 steps:
 
+
 * [on dspace] Get the OCW collection as a CSV file:
   * `sudo su - dspace`; `/home/dspace/dspace.mit.edu/bin/dspace metadata-export -f <working-dir>/test.csv -i $handle -a`
   * $handle = 1721.1/33971 on dspace-test
@@ -23,7 +24,8 @@ steps:
   * `nohup ./import_items /directory/with/your/zip/files/ &`
   * (nohup prevents the process from dying when your ssh connection goes down, e.g. due to your computer sleeping)
 * Import new metadata:
-  * `nohup ./import_metadata /directory/with/your/provenance/files/ &`
+  * `./import_metadata /directory/with/your/provenance/files/ > import_metadata.log &`
+  * (This process doens't take nearly as long and thus doesn't require nohup.)
 
 ## Troubleshooting
 

@@ -13,7 +13,7 @@ fi
 touch metadata_successes.txt
 
 for file in "$1"*.csv; do
-  if /home/dspace/dspace.mit.edu/bin/dspace metadata-import -f $file -e m31@mit.edu ; then
+  if yes | /home/dspace/dspace.mit.edu/bin/dspace metadata-import -f $file -e m31@mit.edu ; then
   echo "$file" metadata restored
   echo "$file" >> metadata_successes.txt
 else
